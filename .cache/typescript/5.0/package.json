@@ -1,0 +1,1 @@
+{"private":true,"dependencies":{"types-registry":"^0.1.669"},"devDependencies":{"@types/d":"^1.0.4","@types/di":"^0.0.4","@types/express":"^4.17.21","@types/libsodium-wrappers":"^0.7.13","@types/tough-cookie":"^4.0.5"}}
