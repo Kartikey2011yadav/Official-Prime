@@ -1,18 +1,12 @@
 const path=require("node:path");
-const {guildId} = require('./config.json');
+const {guildId} = require('../config.json');
 const client=require(`${path.dirname(__dirname)}/index.js`);
 const { DisTube } = require('distube');
 const { SpotifyPlugin } = require('@distube/spotify');
 const { YtDlpPlugin } = require('@distube/yt-dlp');
 const distube = new DisTube(client,
 {
-    plugins: [new SpotifyPlugin({emitEventsAfterFetching: true}),new YtDlpPlugin()],
-    searchSongs: 5,
-    searchCooldown: 30,
-    leaveOnEmpty: true,
-    leaveOnFinish: true,
-    leaveOnStop: false,
-    directLink : true,
+    plugins: [new YtDlpPlugin({update:true}), new SpotifyPlugin()],
 });
 
 const distubeFunc=()=>
